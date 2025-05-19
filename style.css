@@ -1,0 +1,574 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #a1caea;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #a9996946;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  max-width: 1200px;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  color: rgb(182, 166, 16);
+  font-size: 1.8rem;
+}
+
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #bda61f;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover, footer a:hover {
+  color: #dddddd;
+}
+
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("images/home-bg.jpg") center/cover no-repeat fixed;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.homepage .content {
+  display: flex;
+  height: 85%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homepage .content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: rgb(213, 160, 11);
+}
+
+.homepage .content .text {
+  margin-bottom: 50px;
+  color: #e2cc24;
+  font-size: 1.2rem;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(16, 16, 16, 0.689);
+}
+
+.content a {
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #86871eb5;
+  border: 2px solid #2b2c01;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: #ffffff;
+  background: rgba(17, 16, 16, 0.3);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+section > p {
+  text-align: center;
+}
+
+section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-top: 50px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+section.about {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.about .company-info {
+  margin-top: 30px;
+}
+
+.about h3 {
+  margin: 30px 0 10px;
+}
+
+.about .team {
+  text-align: left;
+  width: 100%;
+}
+
+.about .team ul {
+  padding-left: 20px;
+}
+
+section .cards .card {
+  background: #ae942a55;
+  padding: 40px 15px;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+  width: calc(33% - 30px);
+  text-align: center;
+}
+
+.services .card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.portfolio .card img {
+  width: 100%;
+  padding-bottom: 10px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.cards .card p {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+.contact .row {
+  margin: 60px 0 90px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .row .col {
+  padding: 0 10px;
+  width: calc(50% - 50px);
+}
+
+.contact form input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #333;
+  transition: 0.2s ease;
+}
+
+.contact form button:hover {
+  background: #525252;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 20px 0;
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fdf900;
+}
+
+footer a {
+  padding: 0;
+}
+
+@media screen and (max-width: 860px) {
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333;
+    transition: left 0.3s ease;
+  }
+
+  .navbar #menu-toggler:checked~.all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(50% - 15px);
+    margin-bottom: 30px;
+  }
+
+  .homepage .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .homepage .content .text {
+    font-size: 1rem;
+  }
+
+  .content a {
+    font-size: 1rem;
+    padding: 9px 20px;
+  }
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row .col {
+    width: 100%;
+  }
+
+  footer a {
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+/* Add this CSS to style the login button */
+.login-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white; /* Text color */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid white; /* White border */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.login-btn:hover {
+  background-color: white; /* White background on hover */
+  color: black; /* Black text on hover */
+}
+.animated-title {
+    font-size: 3rem;
+    color: yellow;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: fadeInSlide 2s ease-out, glow 5s infinite alternate;
+  }
+
+  /* Keyframe for fade-in and slide effect */
+  @keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-text {
+    animation: fadeIn 2s ease-out;
+  }
+  /* Apply background image to body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('picture/santarita.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white; /* Set default text color to white for better contrast */
+}
+
+/* Add a dark overlay on the background to ensure text is readable */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: -1; /* Place overlay behind the content */
+}
+
+/* Navbar text color */
+.navbar {
+  color: white;
+}
+
+/* Make sure text inside the content is readable */
+
+
+/* Navbar links and hover effect */
+.all-links a {
+  color: white; /* Set navbar links color to white */
+  text-decoration: none;
+}
+
+.all-links a:hover {
+  color: yellow; /* Change color on hover for better interaction */
+}
+/* Ensure the container takes up enough space */
+.homepage {
+  position: relative;
+}
+
+.animated-title {
+  font-size: 60px; /* Adjust font size as needed */
+  position: relative;
+  font-weight: bold;
+}
+
+/* Style for the letter "O" */
+.letter-o {
+  position: relative;
+  display: inline-block;
+  width: 90px; /* Adjust to match the font size */
+  height: 90px; /* Adjust to match the font size */
+  background-image: url('picture/santaritalogo-removebg-preview (1).png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  line-height: 70px; /* Center the text vertically */
+  color: transparent; /* Hide the letter "O" text */
+  top: 10px;
+}
+
+/* Style for the rest of the text */
+.animated-title span {
+  color: inherit; /* Set color for the rest of the text */
+  
+}
+/* General animation setup */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-10px); /* Float up */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Normal size */
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1); /* Slightly bigger */
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+    opacity: 1;
+  }
+}
+
+/* Animation styles */
+.animated-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.letter-o {
+  display: inline-block;
+  color: #f39c12; /* Highlight color */
+  font-weight: bold;
+  font-size: 3rem;
+  animation: pulse 2s infinite;
+}
+
+.animate-text {
+  font-size: 1.2rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* General card styling */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align cards */
+  gap: 20px; /* Space between cards */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  position: relative;
+  width: 300px; /* Card width */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure zoomed elements stay within bounds */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff; /* Background color */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Hover effect for card */
+.card:hover {
+  transform: scale(1.05); /* Slightly zoom the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+}
+
+/* Image styling */
+.card img {
+  width: 80px; /* Adjust size */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth zoom animation */
+  margin-bottom: 15px;
+}
+
+/* Zoom effect for image */
+.card:hover img {
+  transform: scale(1.2); /* Zoom image */
+}
+
+/* Card content styling */
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+
+
